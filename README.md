@@ -8,7 +8,9 @@
 
 ### Contato: 37999262829
 
-## Versão do Angular: V-13
+## Versão do Angular:
+
+#### V-13
 
 ## Como Rodar a aplicação:
 
