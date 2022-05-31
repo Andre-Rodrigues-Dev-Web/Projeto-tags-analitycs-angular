@@ -8,24 +8,18 @@ import { GoogleTagManagerService } from 'angular-google-tag-manager';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
+  title = 'base-teste-tags';
   constructor(
     private router: Router,
     private gtmService: GoogleTagManagerService
   ) {}
-
-  title = 'angular-google-tag-manager demo application';
-
   customEvent() {
     // push GTM data layer with a custom event
     const gtmTag = {
       event: 'button-click',
       data: 'my-custom-event',
-      action: 'clicou',
-      label: 'banner:2a-via',
     };
     this.gtmService.pushTag(gtmTag);
-
-    alert('Este botão foi clicado');
   }
 
   ngOnInit() {
@@ -34,8 +28,6 @@ export class AppComponent implements OnInit {
       if (item instanceof NavigationEnd) {
         const gtmTag = {
           event: 'page',
-          action: 'clicou',
-          label: 'banner:2a-via',
           pageName: item.url,
         };
 
