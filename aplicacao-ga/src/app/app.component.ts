@@ -18,29 +18,13 @@ export class AppComponent implements OnInit {
   customEvent() {
     // push GTM data layer with a custom event
     const gtmTag = {
-      event: 'button-click',
-      data: 'my-custom-event',
-      action: 'clicou',
-      label: 'banner:2a-via',
+      event: 'ga_event',
+      eventCategory: 'inclusao unitaria',
+      eventAction: 'clicou',
+      eventLabel: 'busca',
     };
     this.gtmService.pushTag(gtmTag);
-
-    alert('Este botão foi clicado');
   }
 
-  ngOnInit() {
-    // push GTM data layer for every visited page
-    this.router.events.forEach((item) => {
-      if (item instanceof NavigationEnd) {
-        const gtmTag = {
-          event: 'page',
-          action: 'clicou',
-          label: 'banner:2a-via',
-          pageName: item.url,
-        };
-
-        this.gtmService.pushTag(gtmTag);
-      }
-    });
-  }
+  ngOnInit() {}
 }

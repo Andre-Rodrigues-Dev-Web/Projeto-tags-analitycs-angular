@@ -7,7 +7,7 @@ import { AboutComponent } from './about/about.component';
 @NgModule({
   declarations: [AppComponent, AboutComponent],
   imports: [BrowserModule, AppRoutingModule],
-  providers: [{ provide: 'googleTagManagerId', useValue: 'GTM-T4F37NX' }],
+  providers: [{ provide: 'googleTagManagerId', useValue: 'GTM-TH8245L' }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
